@@ -1,0 +1,101 @@
+.container {
+    padding: 80px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 40px 20px;
+    }
+    .right {
+        .bottomImage {
+            margin-top: 60px;
+            @media screen and (max-width: 768px) {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .left {
+        margin-top: 70px;
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 20px;
+            letter-spacing: -0.04em;
+            color: #213f7d;
+        }
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 12px;
+            color: #545f7d;
+        }
+        .form {
+            width: 100%;
+            .formGroup,
+            .formGroup_password {
+                input {
+                    background: #ffffff;
+                    border: 2px solid rgba(84, 95, 125, 0.15);
+                    border-radius: 5px;
+                    padding: 20px;
+                    width: 93%;
+                    outline: none;
+                    @media screen and (max-width: 768px) {
+                        width: 93%;
+                        padding: 10px;
+                    }
+                }
+            }
+            .formGroup_password {
+                margin: 15px 0;
+                background: #ffffff;
+                width: 100%;
+                border: 2px solid rgba(84, 95, 125, 0.15);
+                display: inline-flex;
+                align-items: center;
+                input {
+                    border: none;
+                    outline: none;
+                }
+
+                .showPassword {
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 16px;
+                    text-align: center;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #39cdcc;
+                    position: relative;
+                    cursor: pointer;
+                    right: 20px;
+                    @media screen and (max-width: 768px) {
+                        right: 10px;
+                    }
+                }
+            }
+            .forgotPassword {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+                text-align: right;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #39cdcc;
+            }
+            .button {
+                background: #39cdcc;
+                border-radius: 8px;
+                padding: 20px;
+                width: 100%;
+                border: none;
+                color: #fff;
+                margin-top: 25px;
+            }
+        }
+    }
+}

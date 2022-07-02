@@ -1,0 +1,104 @@
+.navbar {
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 70px;
+    width: 98%;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    padding: 5px 50px 5px 20px;
+    @media screen and (max-width: 768px) {
+        justify-content: space-between;
+        padding: 0 0 0 5px;
+    }
+
+    .navbar_logo {
+        @media screen and (max-width: 768px) {
+            display: flex;
+        }
+        img {
+            @media screen and (max-width: 768px) {
+                width: 100px;
+            }
+        }
+        .sidebarMenu {
+            display: none;
+            @media screen and (max-width: 768px) {
+                display: block;
+                margin-right: 15px;
+            }
+        }
+    }
+    .navbar_searchbar {
+        .search {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(33, 64, 125, 0.2);
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            width: 400px;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+
+            input {
+                border: none;
+                width: 100%;
+                padding: 0 10px;
+                outline: none;
+            }
+            .search_img {
+                background: #39cdcc;
+                padding: 10px;
+                border-bottom-right-radius: 8px;
+                border-top-right-radius: 8px;
+                width: 40px;
+            }
+        }
+    }
+    .options {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        a {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration-line: underline;
+            color: #213f7d;
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+        svg {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            img {
+                @media screen and (max-width: 768px) {
+                    width: 30px;
+                }
+            }
+            select {
+                border: none;
+                outline: none;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: #213f7d;
+                // width: 100px;
+                @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
