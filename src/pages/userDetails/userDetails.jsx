@@ -221,7 +221,7 @@ const UserDetails = () => {
                         </div>
                     </div>
                 ) : (
-                    ""
+                    <div className={styles.userTab}> <h5>No Information Available</h5></div>
                 )}
             </div>
         </Layout>
