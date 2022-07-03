@@ -4,6 +4,28 @@
     .container_sidebar_open {
         position: relative;
         height: 100%;
+        padding-left: 16rem;
+        @media screen and (max-width: 768px) {
+            display: block;
+            padding-left: 0;
+        }
+        .sidebar_content {
+            display: block;
+            overflow-y: auto;
+            width: 16rem;
+            height: 100%;
+            left: 0;
+            position: fixed;
+            @media screen and (width: 2560px) {
+                left: 35rem;
+            }
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+            .container_sidebar_open {
+                display: none;
+            }
+        }
         .main {
             padding-top: 8rem;
             overflow-y: auto;

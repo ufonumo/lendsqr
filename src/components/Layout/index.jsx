@@ -12,21 +12,19 @@ const Layout = ({ pageTitle, children }) => {
             <div
                 className={!openSidebar ? styles.container_sidebar_open : styles.container_sidebar}
             >
-                {openSidebar ? (
-                    <div className={styles.sidebar_content}>
-                        <SideBar pageTitle={pageTitle} />
-                    </div>
-                ) : null}
+                <div className={styles.sidebar_content}>
+                    <SideBar pageTitle={pageTitle} />
+                </div>
 
                 <Drawer
                     opened={openSidebar}
                     onClose={() => setOpenSidebar(false)}
-                    size="75%"
                     withCloseButton={true}
                     overlayColor="inherit"
                     classNames={{
                         closeButton: styles.closeButton,
                     }}
+                    onScroll={true}
                 >
                     <SideBar pageTitle={pageTitle} />
                 </Drawer>
