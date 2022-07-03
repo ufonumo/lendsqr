@@ -16,9 +16,7 @@
             height: 100%;
             left: 0;
             position: fixed;
-            @media screen and (width: 2560px) {
-                left: 35rem;
-            }
+
             @media screen and (max-width: 768px) {
                 display: none;
             }
@@ -33,6 +31,8 @@
             height: 100%;
             background: #e5e5e5;
             .main_container {
+                max-width: 1440px;
+                margin: 0 auto;
                 padding: 0 2rem;
                 @media screen and (max-width: 526px) {
                     padding: 0 1rem;

@@ -24,7 +24,6 @@ const Layout = ({ pageTitle, children }) => {
                     classNames={{
                         closeButton: styles.closeButton,
                     }}
-                    onScroll={true}
                 >
                     <SideBar pageTitle={pageTitle} />
                 </Drawer>

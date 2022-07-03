@@ -24,7 +24,7 @@ const UserDetails = () => {
         <Layout pageTitle="Users">
             <div className={styles.mainContainer}>
                 <div className={styles.link}>
-                    <Link to="/dashboard">
+                    <Link to="/users">
                         {" "}
                         <BiArrowBack size={25} /> Back to Users
                     </Link>

@@ -76,6 +76,9 @@ const Table = () => {
                             <BiFilter size={20} color="#545F7D" />
                         </button>
                     }
+                    classNames={{
+                        body: { padding: "0px" },
+                    }}
                 >
                     <Menu.Item>
                         <div className={styles.filter_option}>
@@ -132,12 +135,18 @@ const Table = () => {
                         </div>
 
                         <div className={styles.filter_btn}>
-                            <button className={styles.reset} onClick={handlers.close}>
-                                Reset
-                            </button>
-                            <button onClick={handlers.close} className={styles.filter}>
-                                Filter
-                            </button>
+                            <input
+                                className={styles.reset}
+                                onClick={handlers.close}
+                                type="button"
+                                value="Reset"
+                            />
+                            <input
+                                className={styles.filter}
+                                onClick={handlers.close}
+                                type="button"
+                                value="Filter"
+                            />
                         </div>
                     </Menu.Item>
                 </Menu>
@@ -151,44 +160,28 @@ const Table = () => {
     ];
     return (
         <div>
-            <table className={styles.table}>
-                {isLoading ? (
-                    <div>
-                        <BiLoader />{" "}
-                    </div>
-                ) : (
-                    <div className={styles.tableContainer}>
-                        <thead className={styles.tableHeader}>
+            {" "}
+            {isLoading ? (
+                <BiLoader />
+            ) : (
+                <div className={styles.wrapper}>
+                    <table className={styles.table}>
+                        <thead className={styles.tableContainer}>
                             <tr className={styles.tableRow}>
                                 {tableHead.map((item, index) => (
-                                    <th
-                                        key={index}
-                                        style={{
-                                            borderBottom: "none",
-                                        }}
-                                        className={styles.tableHead}
-                                    >
-                                        <div className={styles.tableContent}>
-                                            <p>
-                                                {item.title}
-                                                <span>{item?.icon}</span>
-                                            </p>
-                                        </div>
+                                    <th key={index}>
+                                        <span className={styles.tableContent}>
+                                            {item.title}
+                                            <span>{item?.icon}</span>
+                                        </span>
                                     </th>
                                 ))}
-
-                                <th
-                                    style={{
-                                        borderBottom: "none",
-                                    }}
-                                ></th>
                             </tr>
                         </thead>
                         <tbody>{rows}</tbody>
-                    </div>
-                )}
-            </table>
-
+                    </table>
+                </div>
+            )}
             <div className={styles.paginationContainer}>
                 <div>
                     <span className={styles.showing}>
