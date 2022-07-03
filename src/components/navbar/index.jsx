@@ -14,28 +14,30 @@ const Navbar = ({ setOpenSidebar, openSidebar }) => {
                 </div>
                 <img src={logo} alt="logo" />
             </div>
-            <div className={styles.navbar_searchbar}>
-                <div className={styles.search}>
-                    <input
-                        type="text"
-                        name="search"
-                        id="search"
-                        placeholder="Search for anything"
-                    />
-                    <div className={styles.search_img}>
-                        {" "}
-                        <AiOutlineSearch color="#fff" size={25} />
+            <div className={styles.flex}>
+                <div className={styles.navbar_searchbar}>
+                    <div className={styles.search}>
+                        <input
+                            type="text"
+                            name="search"
+                            id="search"
+                            placeholder="Search for anything"
+                        />
+                        <div className={styles.search_img}>
+                            {" "}
+                            <AiOutlineSearch color="#fff" size={20} />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className={styles.options}>
-                <a href="#/">Docs</a>
-                <IoMdNotificationsOutline color="#213F7D" size={25} />
-                <div className={styles.profile}>
-                    <img src={avatar} alt="avatar" />
-                    <select name="profile" id="">
-                        <option value="Adedeji">Adedeji</option>
-                    </select>
+                <div className={styles.options}>
+                    <a href="#/">Docs</a>
+                    <IoMdNotificationsOutline color="#213F7D" size={25} />
+                    <div className={styles.profile}>
+                        <img src={avatar} alt="avatar" />
+                        <select name="profile" id="">
+                            <option value="Adedeji">Adedeji</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>

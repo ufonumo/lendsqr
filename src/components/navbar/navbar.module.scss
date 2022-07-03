@@ -2,11 +2,15 @@
     z-index: 20;
     position: fixed;
     top: 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    @media screen and (min-width: 2560px) {
+        grid-template-columns: 680px 1fr;
+    }
     height: 70px;
     width: 98%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background: #ffffff;
     box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
     padding: 5px 50px 5px 20px;
@@ -32,6 +36,10 @@
             }
         }
     }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
     .navbar_searchbar {
         .search {
             background: rgba(255, 255, 255, 0.2);
@@ -40,6 +48,7 @@
             display: inline-flex;
             align-items: center;
             width: 400px;
+            color: rgba(33, 64, 125, 0.2);
 
             @media screen and (max-width: 768px) {
                 display: none;
@@ -56,7 +65,8 @@
                 padding: 10px;
                 border-bottom-right-radius: 8px;
                 border-top-right-radius: 8px;
-                width: 40px;
+                width: 56px;
+                text-align: center;
             }
         }
     }
